@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Recovery</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; }
+    .token { 
+      display: inline-block;
+      background: #fff3e0; 
+      border: 1px solid #ffb74d; 
+      padding: 10px 15px; 
+      font-size: 1.2em; 
+      letter-spacing: 2px;
+      margin: 20px 0;
+      color: #e65100;
+    }
+    .footer { 
+      margin-top: 30px; 
+      font-size: 0.9em; 
+      color: #777; 
+      text-align: center; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Horafy Password Recovery</h2>
+    </div>
+
+    <p>Hello <strong>{{ .Email }}</strong>,</p>
+    <p>You requested to reset your Horafy password. Please use the code below to create a new password:</p>
+
+    <div class="token">{{ .Token }}</div>
+
+    <p>If you didn’t request this, please ignore this email.</p>
+
+    <div class="footer">
+      <p>The Horafy Support Team</p>
+      <p>© 2025 Horafy. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
